@@ -83,3 +83,8 @@ body {
 .py-5 {
     color: white; 
 }
+h3 {
+
+    color:  oklch(0.646 0.222 41.116);
+
+}

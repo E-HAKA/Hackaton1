@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     
-
+<h3>
 <form class="row g-3">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
@@ -72,12 +73,12 @@
     </div>
   </div>
   <div class="col-1">
-    <button type="submit" class="btn btn-primary">Paga ahora</button>
-  </div>
-  <div class="col-1">
-    <button type="submit" class="btn btn-primary">Regresar</button>
-  </div>
-
+  <button type="submit" class="btn btn-primary" onclick="alert('¡Pago realizado con éxito!'); location.reload();">Paga ahora</button>
+</div>
+<div class="col-1">
+  <a href="index.html" class="btn btn-primary">Regresar</a>
+</div>
+</h3>
 </form>
 
 
