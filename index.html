@@ -1,135 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tienda Deportiva - Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ApexSport | Membresías</title>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
-<body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body style="background-color:#000; color:white;">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">SportShop</a>
+
+      <a class="navbar-brand fw-bold" href="#">
+        APEX<span class="text-danger">SPORT</span>
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#membresias">Membresías</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Instalaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
         </ul>
-        <!-- Aquí está el cambio: el carrito ahora es un enlace -->
-        <a href="carrito.html" class="btn btn-success ms-3">Carrito</a>
       </div>
+
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="bg-primary text-white text-center p-5">
+  <!-- ============== HERO ============== -->
+<section class="text-center p-5"
+  style="
+    background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('./PIC/atletauno.jpg') center/cover no-repeat;">
+  
+  <div class="container">
+    <span class="badge bg-danger mb-3">Membresías 2026</span>
+    <h1 class="display-4 fw-bold mt-3">
+      SUPERA EL <span class="text-danger">SIGUIENTE NIVEL</span>
+    </h1>
+    <p class="lead">
+      Accede a las mejores instalaciones deportivas con nuestras membresías.
+    </p>
+    <a href="#membresias" class="btn btn-danger btn-lg mt-3">
+      Ver Membresías
+    </a>
+  </div>
+</section>
+``
+  <!-- ================= MEMBRESÍAS ================= -->
+  <section id="membresias" class="py-5 bg-light text-dark">
     <div class="container">
-      <h1 class="display-4 fw-bold">Equípate para ganar</h1>
-      <p class="lead">Encuentra lo mejor en ropa, calzado y accesorios deportivos</p>
-      <a href="productos.html" class="btn btn-success btn-lg">Compra ahora</a>
-    </div>
-  </section>
+      <h2 class="text-center mb-5 fw-bold">Nuestras Membresías</h2>
 
-  <!-- Productos destacados -->
-  <section id="productos" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Productos destacados</h2>
-      <div class="row">
-        <!-- Producto -->
+      <div class="row text-center g-4">
+
+        <!-- Básica -->
         <div class="col-md-4">
-          <div class="card">
-            <a href="producto.html">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Tenis deportivos">
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title"><a href="producto.html" class="text-dark text-decoration-none">Tenis Running</a></h5>
-              <p class="card-text">$1,299 MXN</p>
-              <a href="producto.html" class="btn btn-success">Ver detalles</a>
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h4 class="card-title fw-bold">PLATA</h4>
+              <h2 class="text-danger">$499 MXN</h2>
+              <p class="text-muted">mensual</p>
+              <ul class="list-unstyled">
+                <li>Acceso a natación</li>
+                <li>Algunas canchas deportivas</li>
+                <li>Vestidores</li>
+              </ul>
+              <a href="#" class="btn btn-outline-danger mt-3">Elegir plan</a>
             </div>
           </div>
         </div>
-        <!-- Producto -->
+
+        <!-- Plus -->
         <div class="col-md-4">
-          <div class="card">
-            <a href="producto.html">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Balón de fútbol">
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title"><a href="producto.html" class="text-dark text-decoration-none">Balón Fútbol</a></h5>
-              <p class="card-text">$499 MXN</p>
-              <a href="producto.html" class="btn btn-success">Ver detalles</a>
+          <div class="card h-100 shadow border-danger">
+            <div class="card-body">
+              <h4 class="card-title fw-bold">ORO</h4>
+              <h2 class="text-danger">$799 MXN</h2>
+              <p class="text-muted">mensual</p>
+              <ul class="list-unstyled">
+                <li>Gimnasio completo</li>
+                <li>Todas las canchas</li>
+                <li>Natación</li>
+                <li>Vestidores premium</li>
+              </ul>
+              <a href="#" class="btn btn-danger mt-3">Elegir plan</a>
             </div>
           </div>
         </div>
-        <!-- Producto -->
+
+        <!-- Elite -->
         <div class="col-md-4">
-          <div class="card">
-            <a href="producto.html">
-              <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Playera deportiva">
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title"><a href="producto.html" class="text-dark text-decoration-none">Playera Dry-Fit</a></h5>
-              <p class="card-text">$399 MXN</p>
-              <a href="producto.html" class="btn btn-success">Ver detalles</a>
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h4 class="card-title fw-bold">DIAMANTE</h4>
+              <h2 class="text-danger">$1,199 MXN</h2>
+              <p class="text-muted">mensual</p>
+              <ul class="list-unstyled">
+                <li>Acceso total</li>
+                <li>Todos los deportes</li>
+                <li>Clases especializadas</li>
+                <li>Áreas VIP</li>
+              </ul>
+              <a href="#" class="btn btn-outline-danger mt-3">Elegir plan</a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Promociones -->
-  <section class="bg-danger text-white text-center p-4">
-    <h2>¡Hasta 50% de descuento!</h2>
-    <p>En artículos seleccionados por tiempo limitado</p>
-    <a href="productos.html" class="btn btn-light">Ver promociones</a>
-  </section>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row text-center text-md-start">
 
-  <!-- Testimonios -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <blockquote class="blockquote text-center">
-            <p>"Excelente calidad y servicio, mis tenis llegaron rapidísimo."</p>
-            <footer class="blockquote-footer">María López</footer>
-          </blockquote>
-        </div>
-        <div class="col-md-4">
-          <blockquote class="blockquote text-center">
-            <p>"El balón es perfecto para entrenar, muy resistente."</p>
-            <footer class="blockquote-footer">Carlos Pérez</footer>
-          </blockquote>
-        </div>
-        <div class="col-md-4">
-          <blockquote class="blockquote text-center">
-            <p>"La playera es ligera y cómoda, ideal para correr."</p>
-            <footer class="blockquote-footer">Ana Torres</footer>
-          </blockquote>
+      <!-- MARCA -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">APEX<span class="text-danger">SPORT</span></h5>
+        <p class="text-secondary">
+          Innovación y rendimiento para atletas de élite desde 2011.
+        </p>
+      </div>
+
+      <!-- PRODUCTOS -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">PRODUCTOS</h6>
+        <p class="text-secondary mb-1">Membresía Básica</p>
+        <p class="text-secondary mb-1">Membresía Plus</p>
+        <p class="text-secondary">Membresía Elite</p>
+      </div>
+
+      <!-- EMPRESA -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">EMPRESA</h6>
+        <p class="text-secondary mb-1">Sobre Nosotros</p>
+        <p class="text-secondary mb-1">Instalaciones</p>
+        <p class="text-secondary">Contacto</p>
+      </div>
+
+      <!-- REDES SOCIALES -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">SÍGUENOS</h6>
+
+        <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+
+          <a href="#"
+             style="
+               width:45px;
+               height:45px;
+               background:#1a1a1a;
+               border-radius:50%;
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               color:white;
+               text-decoration:none;">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="#"
+             style="
+               width:45px;
+               height:45px;
+               background:#1a1a1a;
+               border-radius:50%;
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               color:white;
+               text-decoration:none;">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="#"
+             style="
+               width:45px;
+               height:45px;
+               background:#1a1a1a;
+               border-radius:50%;
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               color:white;
+               text-decoration:none;">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+
+          <a href="#"
+             style="
+               width:45px;
+               height:45px;
+               background:#1a1a1a;
+               border-radius:50%;
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               color:white;
+               text-decoration:none;">
+            <i class="bi bi-youtube"></i>
+          </a>
+
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center p-3">
-    <p>SportShop © 2026 | Contacto: info@sportshop.com | Tel: 55-1234-5678</p>
-    <div>
-      <a href="#" class="text-white me-2">Facebook</a>
-      <a href="#" class="text-white me-2">Instagram</a>
-      <a href="#" class="text-white">Twitter</a>
     </div>
-  </footer>
+
+    <hr class="border-secondary">
+
+    <p class="text-center text-secondary mb-0">
+      © 2026 ApexSport. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
