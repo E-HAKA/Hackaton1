@@ -1,85 +1,51 @@
 console.log("JS conectado correctamente 🚀");
 
+document.addEventListener("DOMContentLoaded", () => {
 
-// ==========================
-// Animación aparición cards
-// ==========================
+  // =============================
+  // Seleccionar SOLO planes
+  // =============================
+  const plans = document.querySelectorAll("#planes .plan-card");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  console.log("Planes encontrados:", plans.length);
 
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
+  // =============================
+  // Animación de entrada (para TODAS las cards)
+  // =============================
+  const allCards = document.querySelectorAll(".card");
 
-  });
-}, {
-  threshold: 0.2
-});
+  setTimeout(() => {
+    allCards.forEach(card => {
+      card.classList.add("show");
+    });
+  }, 200);
 
-document.querySelectorAll(".card, .feature-card, .plan-card")
-  .forEach(el => observer.observe(el));
+  // =============================
+  // Selección de membresía
+  // =============================
+  plans.forEach(plan => {
 
+    plan.addEventListener("click", () => {
 
+      plans.forEach(p => p.classList.remove("selected"));
+      plan.classList.add("selected");
 
-// ==========================
-// Selección de membresía
-// ==========================
-
-const planes = document.querySelectorAll(".plan-card");
-
-planes.forEach(plan => {
-
-  plan.addEventListener("click", () => {
-
-    planes.forEach(p => p.classList.remove("selected"));
-
-    plan.classList.add("selected");
+      console.log("Plan seleccionado:", plan.querySelector(".card-title")?.innerText);
+    });
 
   });
 
-});
-
-
-
-// ==========================
-// Navbar sombra al scroll
-// ==========================
-
-window.addEventListener("scroll", () => {
-
+  // =============================
+  // Navbar sombra
+  // =============================
   const nav = document.querySelector(".navbar");
 
-  if (!nav) return;
-
-  if (window.scrollY > 50) {
-    nav.classList.add("shadow");
-  } else {
-    nav.classList.remove("shadow");
-  }
+  window.addEventListener("scroll", () => {
+    if (!nav) return;
+    nav.classList.toggle("shadow", window.scrollY > 50);
+  });
 
 });
 
-
-
-// ==========================
-// Modal Registro
-// ==========================
-
-const form = document.getElementById("registroForm");
-
-if (form) {
-
-  form.addEventListener("submit", e => {
-
-    e.preventDefault();
-
-    alert("Usuario registrado correctamente 🚀");
-
-    const modalEl = document.getElementById("registroModal");
-    const modal = bootstrap.Modal.getInstance(modalEl);
-
-    modal.hide();
-  });
-
-}
+const params = new URLSearchParams(window.location.search);
+console.log(params.get("plan"));
