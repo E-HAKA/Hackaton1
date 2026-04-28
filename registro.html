@@ -1,99 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registro</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
-<h3>
+
+<div class="container mt-5">
+
+<h3 class="mb-4 text-center">Registro de Membresía</h3>
+
 <form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Contraseña</label>
-    <input type="password" class="form-control" id="inputPassword4">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Dirección</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese su direccion completa">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Nombre del Titular</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="..">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">Nombre del Adicional</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">Paquetes</label>
-    <select id="inputState" class="form-select">
-      <option selected>Membresias</option>
-      <option>Plata</option>
-      <option>Oro</option>
-      <option>Diamante</option>
-    </select>
-  </div>
-  <div class="col md-2">
-    <label for="inputZip" class="form-label">Tipo de tarjeta</label>
-    <select id="inputState" class="form-select">
-      <option selected></option>
-      <option>Visa</option>
-      <option>MasterCard</option>
-      <option>AmericanExpress</option>
-    </select>
-  </div>
-    <div class="col-md-6">
-    <label for="inputCity" class="form-label">Ingresa el numero de la tarjeta</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
 
-     <div class="col-md-6">
-    <label for="inputCity" class="form-label">Fecha de Vencimiento</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-
-     <div class="col-md-1">
-    <label for="inputCity" class="form-label">CVV</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Recibir promociones
-      </label>
-    </div>
-  </div>
-  <div class="col-1">
-  <button type="submit" class="btn btn-primary" onclick="alert('¡Pago realizado con éxito!'); location.reload();">Paga ahora</button>
+<!-- Email -->
+<div class="col-md-6">
+<label class="form-label">Email</label>
+<input type="email" class="form-control" id="email">
 </div>
-<div class="col-1">
-  <a href="index.html" class="btn btn-primary">Regresar</a>
+
+<!-- Password -->
+<div class="col-md-6">
+<label class="form-label">Contraseña</label>
+<input type="password" class="form-control" id="password">
 </div>
-</h3>
+
+<!-- Dirección -->
+<div class="col-12">
+<label class="form-label">Dirección</label>
+<input type="text" class="form-control" id="direccion"
+placeholder="Ingrese su dirección completa">
+</div>
+
+<!-- Titular -->
+<div class="col-12">
+<label class="form-label">Nombre del Titular</label>
+<input type="text" class="form-control" id="titular">
+</div>
+
+<!-- Adicional -->
+<div class="col-md-6">
+<label class="form-label">Nombre del Adicional</label>
+<input type="text" class="form-control" id="adicional">
+</div>
+
+<!-- Paquetes -->
+<div class="col-md-3">
+  <label class="form-label">Plan seleccionado</label>
+
+  <div class="form-control bg-dark text-white fw-bold">
+    <span id="planSeleccionado">Cargando...</span>
+  </div>
+  <input type="hidden" id="planInput" name="plan">
+</div>
+
+<!-- Tipo tarjeta -->
+<div class="col-md-3">
+<label class="form-label">Tipo de tarjeta</label>
+<select id="tipoTarjeta" class="form-select">
+<option selected></option>
+<option>Visa</option>
+<option>MasterCard</option>
+<option>American Express</option>
+</select>
+</div>
+
+<!-- Número tarjeta -->
+<div class="col-md-6">
+<label class="form-label">Número de tarjeta</label>
+<input type="text" class="form-control" id="numeroTarjeta">
+</div>
+
+<!-- Vencimiento -->
+<div class="col-md-4">
+<label class="form-label">Fecha de Vencimiento</label>
+<input type="text" class="form-control" id="vencimiento"
+placeholder="MM/AA">
+</div>
+
+<!-- CVV -->
+<div class="col-md-2">
+<label class="form-label">CVV</label>
+<input type="text" class="form-control" id="cvv">
+</div>
+
+<!-- Promos -->
+<div class="col-12">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="promos">
+<label class="form-check-label">
+Recibir promociones
+</label>
+</div>
+</div>
+
+<!-- Botones -->
+<div class="col-12 d-flex gap-2">
+<button type="button" class="btn btn-primary"
+onclick="pagar()">Pagar ahora</button>
+
+<a href="index.html" class="btn btn-secondary">Regresar</a>
+</div>
+
 </form>
 
+</div>
 
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="registro.js"></script>
 
 </body>
 </html>
